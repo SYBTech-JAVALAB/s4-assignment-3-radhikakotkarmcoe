@@ -1,0 +1,28 @@
+package emp;
+
+class EmployeePayroll {
+double calculateSalary(int employeeID) { return 20000;
+}
+
+double calculateSalary(int hoursWorked, double rate) { return hoursWorked * rate;
+}
+
+double calculateSalary(int employeeID, int bonus) { return 20000 + bonus;
+}
+
+double calculateSalary(double annualSalary) { return annualSalary / 12;
+}
+
+double calculateSalary(int hoursWorked, double rate, int overtimePay) { return (hoursWorked * rate) + overtimePay;
+}
+
+double calculateSalary(double salary, int deductions) { return salary - deductions;
+}
+
+double calculateSalary(double salary, double bonus, int deductions) { return salary + bonus - deductions;
+}
+
+public static void main(String[] args) { EmployeePayroll emp = new EmployeePayroll();
+System.out.println("Salary by Employee ID: " + emp.calculateSalary(101)); System.out.println("Salary by Hours & Rate: " + emp.calculateSalary(40, 500.0)); System.out.println("Salary with Bonus: " + emp.calculateSalary(101, 3000)); System.out.println("Monthly Salary from Annual: " + emp.calculateSalary(240000.0)); System.out.println("Salary with Overtime: " + emp.calculateSalary(40, 500.0, 2000)); System.out.println("Salary with Deductions: " + emp.calculateSalary(20000, 1500)); System.out.println("Salary with Bonus & Deductions: " + emp.calculateSalary(20000, 3000, 1000));
+}
+}
